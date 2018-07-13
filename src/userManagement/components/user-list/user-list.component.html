@@ -1,0 +1,10 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th><th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users | async; let i = index" [app-user-list-item]="user" (select)="selectUser($event)" (delete)="deleteUser($event)"></tr>
+  </tbody>
+</table>

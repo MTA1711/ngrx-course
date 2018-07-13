@@ -1,0 +1,17 @@
+<div *ngIf="user$ | async as user else defaultMessage">
+    <h3>
+        User Details
+    </h3>
+    <div class="row">
+      <label for="">FirstName: </label> {{user.firstname}}
+    </div>
+    <div class="row">
+      <label for="">LastName: </label> {{user.lastName}}
+    </div>
+    <div class="row">
+      <label for="">Role: </label> {{user.role}}
+    </div>
+</div>
+<ng-template #defaultMessage>
+    <h3>Select an User</h3>
+</ng-template>
